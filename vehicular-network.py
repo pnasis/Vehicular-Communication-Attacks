@@ -1,10 +1,10 @@
 from mininet.net import Mininet
-from mininet.node import Controller, OVSKernelSwitch, OVSKernelAP
+from mininet.node import Controller, OVSKernelAP, Car
 from mininet.cli import CLI
 from mininet.log import setLogLevel
 
 def vehicularNetwork():
-    net = Mininet(controller=Controller, accessPoint=OVSKernelAP, switch=OVSKernelSwitch)
+    net = Mininet(controller=Controller, accessPoint=OVSKernelAP)
 
     print("*** Creating nodes")
     # Adding vehicles
