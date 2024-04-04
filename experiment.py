@@ -59,9 +59,9 @@ def topology():
 	ap1.start([])
 
 	for id, car in enumerate(net.cars):
-        	car.setIP('10.0.0.{}/8'.format(id+1),
+        	car.setIP('10.0.0.{}/8'.format(id+3),
                 	  intf='{}'.format(car.wintfs[0].name))
-        	car.setIP('10.0.1.{}/8'.format(id+1),
+        	car.setIP('10.0.1.{}/8'.format(id+3),
                 	  intf='{}'.format(car.wintfs[1].name))
 #	sta1.start([c1])
 #	sta2.start([c1])
