@@ -43,8 +43,8 @@ def topology():
         	        band=20, channel=181, proto='batman_adv')
     	net.addLink(sta2, intf='sta2-wlan0', cls=ITSLink,
         	        band=20, channel=181, proto='batman_adv')
-	net.addLink(sta1,ap1)
-	net.addLink(sta2,ap1)
+	net.addLink(sta1,ap1, ssid='vanet-ssid', params={'ip': '10.0.0.3/8'})
+	net.addLink(sta2,ap1, ssid='vanet-ssid', params={'ip': '10.0.0.3/8'})
 	net.addLink(sta1, sta2)
 	#for x in range(0,20):
 	#	net.addMesh(car[x], ssid='mesh')
